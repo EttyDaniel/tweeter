@@ -1,0 +1,59 @@
+/* applys for the title, the textarea, label, 
+button and counter*/
+
+.new-tweet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#tweet-text {
+
+  display: flex;
+  justify-content:flex-start;
+  align-items:flex-start;
+  background-color: transparent;
+  width: 350px;
+  height: 30px;
+  /*border:;*/
+  resize: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid black;
+  margin-bottom: 20px;
+}
+
+#counter {
+  display: flex;
+  justify-content: left;
+  align-items: flex-start;
+}
+
+
+
+.tweet-form{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.under-label {
+  display:flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+#tweet-button {
+  
+  width: 100px;
+  height: 50px;
+  background-color: royalblue;
+  font-family: 'Bungee';
+  color: white;
+  border: none;
+}
+
+

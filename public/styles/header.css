@@ -1,0 +1,14 @@
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(49, 0, 128);
+  height: 400px;
+  width: 100%;
+  background-image: url("../images/binding-light.png");
+}
+
+.user {
+  color: white;
+}
