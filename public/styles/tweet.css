@@ -1,0 +1,36 @@
+/* .tweet-container {
+  border:solid;
+  border:black;
+} */
+.tweets-container {
+  border: 1px solid;
+  margin:3em;
+  width: 350px;
+}
+.tweets-container:hover{
+  box-shadow: 5px 10px;
+}
+
+#user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.linebreak {
+  width: auto;
+  height: 2px;
+  background-color: black;
+}
+.fa.fa-flag:hover, .fas.fa-heart:hover, .fas.fa-retweet:hover {
+  color:darkgoldenrod;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-icons {
+  margin-left: auto;
+}
