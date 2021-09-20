@@ -4,6 +4,8 @@ nav {
   display: flex;
   justify-content: space-between;
   height: 120px;
+  position:fixed;
+  top: 0;
   width: 100%;
   color: #FFF;
   background-color: #4056A1;
