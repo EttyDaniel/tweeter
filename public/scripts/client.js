@@ -14,12 +14,12 @@ of the tweet.
 */
 const createTweetElement = function(tweetObj) {
   const $tweet = $(`<article class="tweet">
-  <div id="user">
-    <h3 id="name">${tweetObj.user.name}</h3>
-    <img src=${tweetObj.user.avatars}>
-    <h4 id="handle">${tweetObj.user.handle}</h4>
+  <div class="user">
+    <div class="user-details"><img class="avatar" src=${tweetObj.user.avatars}>
+    <h3 class="name">${tweetObj.user.name}</h3></div>
+    <h4 class="handle">${tweetObj.user.handle}</h4>
   </div>
-  <div id="tweet-info">
+  <div class="tweet-info">
     <div>${tweetObj.content.text}</div>
     <div class="linebreak"></div>
     <footer>
@@ -32,6 +32,7 @@ const createTweetElement = function(tweetObj) {
     </footer>
   </div>
 </article>`);
+  console.log($tweet);
   return $tweet;
 };
 
@@ -52,22 +53,40 @@ const renderTweets = function(tweets) {
 //helper function should be transffered
 //this function validates that the text is not empty 
 //nor it is not longer than 140 characters
-// const validateForm = function(obj) {
-//   return true;
-// }
+const validateForm = function(text) {
+  let err = null;
+  if (!text) {
+    err = "text can not be empty";
+  } else if (text.length > 140) {
+    err = "text can not exceed 140 characters";
+  }
+  return err;
+}
 
 const form = $('.tweet-form');
+
+
 form.on('submit', function(event) {
   event.preventDefault();
-  
-  console.log(this);
+  const $textareaContainer = $("textarea");
+  const textValue = $textareaContainer.val();
+  const $counterContainer = form.find('.counter');
+  console.log('__________', textValue);
+
+  const err = validateForm(textValue);
+  if(err) {
+    alert(err);
+    return;
+  }
+  console.log("validation successful");
   const serializedData = $(this).serialize();
   $.post('/tweets', serializedData)
   .then((resp) => {
-    console.log(resp);
+    $textareaContainer.val("");
+    const $counterContainer = form.find('.counter');
+    $counterContainer.text(140);
     loadtweets();
   })
-  form.reset();
 });
 
   

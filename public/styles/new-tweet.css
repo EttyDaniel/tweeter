@@ -6,6 +6,7 @@ button and counter*/
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 90%;
 }
 
 #tweet-text {
@@ -14,7 +15,7 @@ button and counter*/
   justify-content:flex-start;
   align-items:flex-start;
   background-color: transparent;
-  width: 350px;
+  width: 100%;
   height: 30px;
   /*border:;*/
   resize: none;
@@ -38,6 +39,7 @@ button and counter*/
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  width: 100%;
 }
 
 .under-label {

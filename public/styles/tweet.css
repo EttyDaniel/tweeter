@@ -3,18 +3,55 @@
   border:black;
 } */
 .tweets-container {
-  border: 1px solid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin:3em;
-  width: 350px;
-}
-.tweets-container:hover{
-  box-shadow: 5px 10px;
+  width: 90%;
 }
 
-#user {
+.user {
+  display: flex;
+  justify-content: space-between;
+
+}
+
+.user-details {
+  display: flex;
+  max-height: 2em;
+  width: 100%;
+  align-items: center;
+
+}
+
+.name {
+  color: black;
+}
+
+.avatar {
+  max-height: 2.5em;
+  margin: 0.5em;
+}
+/* .tweets-container:hover{
+  box-shadow: 5px 10px;
+} */
+
+.tweet {
+  height: auto;
+  padding: 0.75em;
+  margin: 1em 0;
+  border: 1px solid;
+}
+
+/* .user {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: left;
+  color: black;
+} */
+
+.handle {
+  color: gray;
 }
 
 .linebreak {
