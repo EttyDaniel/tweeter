@@ -13,28 +13,34 @@ for returning a tweet <article> element containing the entire HTML structure
 of the tweet.
 */
 const createTweetElement = function(tweetObj) {
-  const $tweet = $(`<article class="tweet">
-  <div class="user">
-    <div class="user-details"><img class="avatar" src=${tweetObj.user.avatars}>
-    <h3 class="name">${tweetObj.user.name}</h3></div>
-    <h4 class="handle">${tweetObj.user.handle}</h4>
-  </div>
-  <div class="tweet-info">
-    <div>${tweetObj.content.text}</div>
-    <div class="linebreak"></div>
-    <footer>
-      <div>${timeago.format(tweetObj.created_at)}</div>
-      <div class="footer-icons">
-        <i class="fa fa-flag"></i>
-        <i class="fas fa-heart"></i>
-        <i class="fas fa-retweet"></i>
+  const safeText = $("<div>").text(tweetObj.content.text).html();
+  console.log("This is the content: ", tweetObj.content.text);
+  console.log("This is what happend after safetext: ", safeText);
+  const $tweet = 
+  $(`<article class="tweet">
+      <div class="user">
+        <div class="user-details"><img class="avatar" src=${tweetObj.user.avatars}>
+        <h3 class="name">${tweetObj.user.name}</h3></div>
+        <h4 class="handle">${tweetObj.user.handle}</h4>
       </div>
-    </footer>
-  </div>
-</article>`);
+      <div class="tweet-info">
+        <div>${safeText}</div>
+        <div class="linebreak"></div>
+        <footer>
+          <div>${timeago.format(tweetObj.created_at)}</div>
+          <div class="footer-icons">
+            <i class="fa fa-flag"></i>
+            <i class="fas fa-heart"></i>
+            <i class="fas fa-retweet"></i>
+          </div>
+        </footer>
+      </div>
+    </article>`);
   console.log($tweet);
   return $tweet;
 };
+
+
 
 /*
 loops through tweets
