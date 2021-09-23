@@ -4,12 +4,13 @@ button and counter*/
 .new-tweet {
   display: flex;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
+  align-items: flex-start;
   flex-direction: column;
   width: 90%;
 }
 
-#tweet-text {
+.tweet-text {
 
   display: flex;
   justify-content:flex-start;
@@ -25,6 +26,11 @@ button and counter*/
   margin-bottom: 20px;
 }
 
+.errormsg {
+  color: red;
+  font-weight: bold;
+}
+
 #counter {
   display: flex;
   justify-content: left;
@@ -32,7 +38,9 @@ button and counter*/
 }
 
 
-
+.label {
+  border: transparent;
+}
 .tweet-form{
 
   display: flex;

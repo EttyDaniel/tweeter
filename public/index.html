@@ -54,10 +54,13 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <div class="errormsg">
+          <!-- insert error messages here -->
+        </div>
         <h2>Compose Tweet</h2>
         <form class="tweet-form" action="/tweets" method="POST">
-          <label for="tweet-text"><b>What are you humming about?</b></label>
-          <textarea name="text" id="tweet-text"></textarea>
+          <label class="tweet-text label"><b>What are you humming about?</b></label>
+          <textarea name="text" class="tweet-text" id="tweet-text"></textarea>
           <div class="under-label">
             <button id="tweet-button" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text"><b>140</b></output>

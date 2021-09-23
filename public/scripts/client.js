@@ -6,7 +6,6 @@
 
 $(() => {
 
-
 /*
 a function that takes in a tweet object and is responsible
 for returning a tweet <article> element containing the entire HTML structure 
@@ -14,8 +13,6 @@ of the tweet.
 */
 const createTweetElement = function(tweetObj) {
   const safeText = $("<div>").text(tweetObj.content.text).html();
-  console.log("This is the content: ", tweetObj.content.text);
-  console.log("This is what happend after safetext: ", safeText);
   const $tweet = 
   $(`<article class="tweet">
       <div class="user">
@@ -36,11 +33,8 @@ const createTweetElement = function(tweetObj) {
         </footer>
       </div>
     </article>`);
-  console.log($tweet);
   return $tweet;
 };
-
-
 
 /*
 loops through tweets
@@ -62,9 +56,9 @@ const renderTweets = function(tweets) {
 const validateForm = function(text) {
   let err = null;
   if (!text) {
-    err = "text can not be empty";
+    err = "Text can not be empty!";
   } else if (text.length > 140) {
-    err = "text can not exceed 140 characters";
+    err = "Text can not exceed 140 characters!";
   }
   return err;
 }
@@ -74,14 +68,13 @@ const form = $('.tweet-form');
 
 form.on('submit', function(event) {
   event.preventDefault();
+  $('.errormsg').text("");
   const $textareaContainer = $("textarea");
   const textValue = $textareaContainer.val();
   const $counterContainer = form.find('.counter');
-  console.log('__________', textValue);
-
   const err = validateForm(textValue);
   if(err) {
-    alert(err);
+    $('.errormsg').text(err);
     return;
   }
   console.log("validation successful");
@@ -94,7 +87,6 @@ form.on('submit', function(event) {
     loadtweets();
   })
 });
-
   
   const loadtweets = () => {$.ajax({
     url: '/tweets',
