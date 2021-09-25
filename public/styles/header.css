@@ -1,14 +1,55 @@
-header {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  background-color: rgb(49, 0, 128);
+  align-items:center;
+  flex-wrap: wrap;
+  /* background-color: rgb(49, 0, 128); */
   height: 400px;
   margin-top: 120px;
-  background-image: url("../images/binding-light.png");
+  background-color: #4056A1;
+  margin-top: 100px;
+  /* margin-left: 15px; */
+  /* background-image: url("../images/binding-light.png"); */
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+
 }
 
 .user {
   color: white;
 }
+
+/* For Screen size 768 and above*/
+@media screen and (min-width: 768px) {
+  .header-main {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    
+  }
+
+   .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(49, 0, 128);
+    background-image: url("../images/binding-light.png");
+    margin-left: 15px;
+    margin-top: 160px;
+  }
+ }
+
+/* @media  screen and (min-width: 768px ) {
+  main {
+    display: flex;
+    flex-direction: row;
+  } 
+  
+}*/

@@ -34,4 +34,12 @@ body {
   justify-content: stretch;
   align-items: center;
   width: 100%;
+  margin-top: 2rem;
  }
+
+.user-first-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+

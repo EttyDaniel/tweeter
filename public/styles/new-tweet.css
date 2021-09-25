@@ -4,10 +4,11 @@ button and counter*/
 .new-tweet {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   align-items: flex-start;
   flex-direction: column;
   width: 90%;
+  margin-top: 8rem;
+
 }
 
 .tweet-text {
@@ -16,9 +17,8 @@ button and counter*/
   justify-content:flex-start;
   align-items:flex-start;
   background-color: transparent;
-  width: 100%;
-  height: 30px;
-  /*border:;*/
+  width: 80%;
+  height: 4rem;
   resize: none;
   outline: none;
   border: none;
@@ -26,15 +26,24 @@ button and counter*/
   margin-bottom: 20px;
 }
 
+.tweet-text-label {
+  font-weight: bolder;
+}
+
 .errormsg {
   color: red;
   font-weight: bold;
+  display: flex;
+  align-items: flex-start;
+  justify-content: start;
 }
 
-#counter {
+.counter {
   display: flex;
   justify-content: left;
   align-items: flex-start;
+  font-weight: bolder;
+  margin-right: 155px;
 }
 
 
@@ -44,8 +53,8 @@ button and counter*/
 .tweet-form{
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
+  align-items: right;
   flex-direction: column;
   width: 100%;
 }
@@ -66,4 +75,8 @@ button and counter*/
   border: none;
 }
 
+.mytweet {
+  width: 100%;
+  word-wrap: break-word;
+}
 

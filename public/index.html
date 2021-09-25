@@ -30,8 +30,7 @@
     <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
   </head>
 
-  <body>
-    
+  <body> 
     <!-- Top nav bar (fixed) -->
     <nav>
       <span>tweeter</span>
@@ -40,35 +39,34 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-
-    <header>
+  <div class="header-main">
+    <header class="header">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
       <br>
       <div class="user">
-          <h2><b>Etty</b> Barone</h2>
+          <h2><b>Etty</b>    Barone</h2>
       </div>
-  </header>
-
+    </header>
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <div class="errormsg">
-          <!-- insert error messages here -->
-        </div>
-        <h2>Compose Tweet</h2>
+      <section class="new-tweet">      
         <form class="tweet-form" action="/tweets" method="POST">
-          <label class="tweet-text label"><b>What are you humming about?</b></label>
+          <div class="errormsg">
+            <!-- insert error messages here -->
+          </div>
+          <label class="tweet-text-label">What are you humming about?</label>
           <textarea name="text" class="tweet-text" id="tweet-text"></textarea>
           <div class="under-label">
             <button id="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text"><b>140</b></output>
+            <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
       </section>
       <section class="tweets-container">
       </section>
     </main>
+  </div>
   </body>
 </html>

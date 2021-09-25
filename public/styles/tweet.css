@@ -32,17 +32,22 @@
   max-height: 2.5em;
   margin: 0.5em;
 }
-/* .tweets-container:hover{
+.tweet:hover{
   box-shadow: 5px 10px;
-} */
+}
 
 .tweet {
   height: auto;
   padding: 0.75em;
   margin: 1em 0;
   border: 1px solid;
+  width: 80%;
 }
 
+.mytweet {
+  width: 100%;
+  word-wrap: break-word;
+}
 /* .user {
   display: flex;
   flex-direction: row;
