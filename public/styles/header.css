@@ -1,16 +1,17 @@
+/*
+This css class is used to style the header area and includes 
+a media query for screen size larger than 1024px
+ */
+
 .header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items:center;
   flex-wrap: wrap;
-  /* background-color: rgb(49, 0, 128); */
   height: 400px;
-  margin-top: 120px;
-  background-color: #4056A1;
   margin-top: 100px;
-  /* margin-left: 15px; */
-  /* background-image: url("../images/binding-light.png"); */
+  background-color: #4056A1;
 }
 
 .header-main {
@@ -25,15 +26,22 @@
   color: white;
 }
 
+.img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  align-content: center;
+}
+
 /* For Screen size 768 and above*/
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .header-main {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     
   }
-
    .header {
     display: flex;
     flex-direction: column;
@@ -43,13 +51,16 @@
     background-image: url("../images/binding-light.png");
     margin-left: 15px;
     margin-top: 160px;
+    width: 100%;
   }
+
+  .img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    align-content: center;
+  }
+
  }
 
-/* @media  screen and (min-width: 768px ) {
-  main {
-    display: flex;
-    flex-direction: row;
-  } 
-  
-}*/

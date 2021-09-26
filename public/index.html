@@ -39,34 +39,33 @@
         <i class="fas fa-angle-double-down"></i>
       </div>
     </nav>
-  <div class="header-main">
-    <header class="header">
-      <div>
-          <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div class="user">
-          <h2><b>Etty</b>    Barone</h2>
-      </div>
-    </header>
-    <!-- Page-specific (main) content here -->
-    <main class="container">
-      <section class="new-tweet">      
-        <form class="tweet-form" action="/tweets" method="POST">
-          <div class="errormsg">
-            <!-- insert error messages here -->
-          </div>
-          <label class="tweet-text-label">What are you humming about?</label>
-          <textarea name="text" class="tweet-text" id="tweet-text"></textarea>
-          <div class="under-label">
-            <button id="tweet-button" type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
-        </form>
-      </section>
-      <section class="tweets-container">
-      </section>
-    </main>
+    <div class="header-main">
+      <header class="header">
+        <div>
+            <img class="img" src="/images/profile-hex.png"> 
+        </div>
+        <div class="user">
+            <h2><b>Etty</b>    Barone</h2>
+        </div>
+      </header>
+      <!-- Page-specific (main) content here -->
+      <main class="container">
+        <section class="new-tweet">      
+          <form class="tweet-form" action="/tweets" method="POST">
+            <div class="errormsg">
+              <!-- Error msg will apear according to validation -->
+            </div>
+            <label class="tweet-text-label">What are you humming about?</label>
+            <textarea name="text" class="tweet-text" id="tweet-text"></textarea>
+            <div class="under-label">
+              <button id="tweet-button" type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </div>
+          </form>
+        </section>
+        <section class="tweets-container">
+        </section>
+      </main>
   </div>
   </body>
 </html>

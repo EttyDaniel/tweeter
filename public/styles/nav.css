@@ -1,21 +1,20 @@
 
-
+/*
+This css class is used to style the navigation area - nav
+ */
 nav {
   display: flex;
   justify-content: space-between;
-  
   height: 120px;
   position:fixed;
   top: 0;
   width: 100%;
-  color: #FFF;
+  color: #FFFFFF;
   background-color: #4056A1;
   font-size: 24px;
   font-family: 'Bungee', sans-serif;
   padding: 1.5em;
   align-items: center;
-  /*position:sticky;
-  Top: 0;*/
   z-index: 100;
 }
 
@@ -24,10 +23,8 @@ nav {
   flex-direction: column;
   font-family: 'Source Sans Pro', sans-serif;
   align-items: center;
-
 }
 
-.fa-angle-double-down:hover {
-  
+.fa-angle-double-down:hover { 
   color: red;
 }

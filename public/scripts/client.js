@@ -4,6 +4,9 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+
+/*Document is Ready */
+
 $(() => {
 
 /*
@@ -50,9 +53,11 @@ const renderTweets = function(tweets) {
   }
 };
 
-//helper function should be transffered
-//this function validates that the text is not empty 
-//nor it is not longer than 140 characters
+
+/*
+this function validates that the text is not empty 
+nor it is not longer than 140 characters
+*/
 const validateForm = function(text) {
   let err = null;
   if (!text) {
@@ -63,8 +68,8 @@ const validateForm = function(text) {
   return err;
 }
 
+/* Declaring a variable that will hold the new tweet form*/
 const form = $('.tweet-form');
-
 
 form.on('submit', function(event) {
   event.preventDefault();
@@ -73,10 +78,12 @@ form.on('submit', function(event) {
   const textValue = $textareaContainer.val();
   const $counterContainer = form.find('.counter');
   const err = validateForm(textValue);
+  //If validation returns an error we will set errormsg's content
   if(err) {
     $('.errormsg').text(err);
     return;
   }
+  //no error was found by validation function
   console.log("validation successful");
   const serializedData = $(this).serialize();
   $.post('/tweets', serializedData)
@@ -88,7 +95,8 @@ form.on('submit', function(event) {
   })
 });
   
-  const loadtweets = () => {$.ajax({
+//loading tweets using Ajax without refreshing the page
+const loadtweets = () => {$.ajax({
     url: '/tweets',
     method: "GET",
     dataType: "json",

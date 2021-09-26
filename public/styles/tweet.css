@@ -1,7 +1,7 @@
-/* .tweet-container {
-  border:solid;
-  border:black;
-} */
+/*
+This css class is used to style the tweet container form
+*/
+
 .tweets-container {
   display: flex;
   flex-direction: column;
@@ -41,22 +41,22 @@
   padding: 0.75em;
   margin: 1em 0;
   border: 1px solid;
-  width: 80%;
+  border-width: medium;
+  width: 100%;
 }
 
 .mytweet {
   width: 100%;
   word-wrap: break-word;
 }
-/* .user {
-  display: flex;
-  flex-direction: row;
-  justify-content: left;
-  color: black;
-} */
+
 
 .handle {
   color: gray;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 1px;
+  margin-top: 1px;
 }
 
 .linebreak {

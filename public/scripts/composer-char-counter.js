@@ -1,3 +1,8 @@
+/*
+This function is responsible for the counter functionality, counting characters 
+and changing colors according to length - red if more than 140 chars and black otherwise
+*/
+
 $(document).ready(function() {
   const textarea = document.getElementById("tweet-text");
   $(textarea).on("input", function () {

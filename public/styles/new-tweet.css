@@ -1,5 +1,7 @@
-/* applys for the title, the textarea, label, 
-button and counter*/
+/*This css class is used to style the new tweet form
+This applys for the title, the textarea, label, 
+button and counter
+*/
 
 .new-tweet {
   display: flex;
@@ -12,12 +14,11 @@ button and counter*/
 }
 
 .tweet-text {
-
   display: flex;
   justify-content:flex-start;
   align-items:flex-start;
   background-color: transparent;
-  width: 80%;
+  width: 100%;
   height: 4rem;
   resize: none;
   outline: none;
@@ -43,9 +44,7 @@ button and counter*/
   justify-content: left;
   align-items: flex-start;
   font-weight: bolder;
-  margin-right: 155px;
 }
-
 
 .label {
   border: transparent;
@@ -79,4 +78,3 @@ button and counter*/
   width: 100%;
   word-wrap: break-word;
 }
-
