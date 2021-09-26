@@ -20,3 +20,9 @@ There are two different designs which will be decided according screen size - 10
 - body-parser
 - chance
 
+## Screenshots
+
+![Twitter screen size 1024px ](docs/App_1024px.png)
+![Twitter empty text error validation ](docs/App_empty_validation.png)
+![Twitter New tweet](docs/App_tweet.png)
+![Twitter screen size under 1024px ](docs/App_under_1024px.png)
