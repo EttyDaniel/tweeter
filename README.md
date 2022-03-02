@@ -1,7 +1,7 @@
 # Tweeter Project
 
 Tweeter is a simple, single-page Twitter clone.
-Tweeter allowes posting tweets 140 characters long and presenting all the existing tweets in a reversed order.
+Tweeter allows posting tweets 140 characters long and presenting all the existing tweets in a reversed order.
 The app showes an avatar, the user's name, the user's handel, the tweet and the date it was posted.
 There are two different designs which will be decided according screen size - 1024px is the breakpoint.
 
